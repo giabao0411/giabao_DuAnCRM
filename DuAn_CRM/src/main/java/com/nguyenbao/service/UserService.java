@@ -89,7 +89,7 @@ public class UserService {
 	//add user
 	public boolean addUser(Users user) {		
 		Connection con = MySQLConnection.getConnection();
-		String sql = "insert into users(email, password, fullname, phone, address) values (?,?,?,?,?)";
+		String sql = "insert into users(fullname, email, password, phone, address) values (?,?,?,?,?)";
 		boolean isSuccess = false;
 		try {
 			PreparedStatement statement = con.prepareStatement(sql);
